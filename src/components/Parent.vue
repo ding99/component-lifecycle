@@ -1,12 +1,21 @@
 <template>
     <div>
         Parent component
+        <button @click="showChild = !showChild">Toggle Child</button>
+        <LifecycleChild v-if="showChild" />  
     </div>
 </template>
 
 <script>
+    import LifecycleChild from './Child.vue'
     export default {
+        components: { LifecycleChild },
         name: 'LifecycleParent',
+        data () {
+            return {
+                showChild: true,
+            }
+        },
         beforeCreate() {
             console.log ('Parent beforeCreated()')
         },
