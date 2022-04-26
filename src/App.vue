@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <LifecycleParent />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LifecycleParent from './components/Parent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LifecycleParent
   }
 }
 </script>
